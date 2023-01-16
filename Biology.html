@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Biology 1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial scale = 1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+<link rel="icon" href="img/dost.png" type="image/x-icon">
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+    body {
+        line-height: 1.7;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: var(--primary-color);
+    }
+    :root{
+   --primary-color: #ffffff;
+    --secondary-color: rgb(54, 54, 54);
+}
+.dark-mode{
+    --primary-color: #252525;
+    --secondary-color: rgb(255, 255, 255);
+}
+.title{
+  color:var(--secondary-color);
+}
+        /*.container-fluid {
+        min-width: 330px;
+        }*/
+        .tab-pane{margin-top: 30px;
+            background-color: rgb(148, 200, 253);
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+        }
+        .underline-hover {
+    display:inline-block;
+    position:relative;
+    padding-bottom:0.1rem;
+}
+.underline-hover::before {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background-color:var(--secondary-color);
+    transition: width 0.25s ease-out;
+}
+.underline-hover:hover::before {
+    width:100%;
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif !important;
+}
+.navbar {
+    /*background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color), #9b9b9b);*/
+    background-color:var(--primary-color)!important;
+    border-bottom:3px rgb(90, 90, 90) solid;
+    box-shadow:0 3px 1em;
+}
+#icon {
+    width:28px;
+    height:28px;
+    cursor:pointer;
+}
+.nav-link {
+    color:var(--secondary-color);
+}
+.navbar-brand {
+    color:var(--secondary-color);
+    font-family: 'Poppins', sans-serif !important;
+}
+.card-body{
+  background-color: var(--primary-color);
+  color:var(--secondary-color);
+}
+.navpillbg{
+  background-color:var(--primary-color) !important;
+}
+.table-responsive{
+        margin: 10px;
+    }
+    caption{
+        font-size: 48px;
+        font-weight: 500;
+        text-align: center;
+        color: black;
+        background-image: url(images/biologyheader.svg); opacity: 0.6;
+        height: 100px;
+        width: auto;
+    }
+
+    @supports (-webkit-text-stroke: 1px rgb(255, 255, 255)) {
+  caption {
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(0, 0, 0);
+  }
+}
+    </style>
+    </head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white p-2">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        <img src="images/pshs_logo.png" alt="PSHS Logo" width="45" height="45" class="d-inline-align-text-center mx-1">
+        Knowledge Hub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="underline-hover nav-link" href="khubhomepage.html">Home</a>
+              <a class="underline-hover nav-link" href="khubcourses.html">Courses</a>
+              <a class="underline-hover nav-link" href="Aboutus.html">About</a>
+              <img src="images/moon.png" alt="Moon" id="icon">
+            </div>
+        </div>
+    </div>
+</nav>
+<section>
+    <div class="container-fluid title" style="text-align: center;"><h1 style="font-size: 300%">Biology 1</h1><hr></div>
+</section>
+<nav class="container">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      <button class="nav-link" id="q1-tab" data-bs-toggle="tab" data-bs-target="#q1" type="button" role="tab" aria-controls="q1" aria-selected="false">Quarter 1</button>
+      <button class="nav-link" id="q2-tab" data-bs-toggle="tab" data-bs-target="#q2" type="button" role="tab" aria-controls="q2" aria-selected="false">Quarter 2</button>
+      <button class="nav-link" id="q3-tab" data-bs-toggle="tab" data-bs-target="#q3" type="button" role="tab" aria-controls="q3" aria-selected="false">Quarter 3</button>
+      <button class="nav-link" id="q4-tab" data-bs-toggle="tab" data-bs-target="#q4" type="button" role="tab" aria-controls="q4" aria-selected="false">Quarter 4</button>
+      <button class="nav-link" id="grades-tab" data-bs-toggle="tab" data-bs-target="#grades" type="button" role="tab" aria-controls="grades" aria-selected="false">Grades</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="container tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><h2>Announcements</h2>
+        <div style="font-size:150%;"></div>
+        <ul style="list-style-type:disc">
+            <li><a href="quiz.html">Diagnostic test</a></li>
+            <li>Suspension of Classes</li>
+            <li>Topics for the 2nd Quarter</li>
+            <li>Assessment listing for 2nd Quarter</li>
+        </ul>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Amazing Fact</h5>
+                  <p class="card-text">25,000,000 cells in your body have died after reading this sentence.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Fun Fact</h5>
+                  <p class="card-text">A chicken egg is one giant cell.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Did you know?</h5>
+                  <p class="card-text">A human's ears and nose never stop growing. </p>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Test your knowledge!</h5>
+                  <p class="card-text">Test your knowledge with this short test.</p>
+                  <ul class="nav nav-pills">
+                    <li class="active"><a href="quiz.html">Click here</a></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+    <div class="container tab-pane fade" id="q1" role="tabpanel" aria-labelledby="q1-tab"><h2>Quarter 1</h2>
+        <ul class="nav nav-pills navpillbg" style="background-color: rgb(247, 247, 250); margin-right: 30px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#1LG">Learning Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#1FA">Formative Assessments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#1AA">Alternative Assessments</a>
+            </li>
+        </ul>
+        <div class="container" id="1LG" style="margin-top: 30px;"><H2>Learning Guides</H2><hr>
+            <h3>Week 1</h3><hr>
+            <h3>Week 2</h3><hr>
+        </div>
+        <div class="container" id="1FA"><H2>Formative Assessments</H2><hr>
+            <h3>FA 1: Evolution</h3><hr>
+            <h3>FA 2: Charles Darwin Fanfic Writing</h3><hr>
+        </div>
+        <div class="container" id="1AA"><H2>Alternative Assessments</H2><hr>
+            <h3>AA 1: Essay on how beautiful evolution is</h3><hr>
+            <h3>AA 2: What Evolutions can I achieve?</h3><hr>
+        </div>   
+    </div>
+    <div class="container tab-pane fade" id="q2" role="tabpanel" aria-labelledby="q2-tab"><h2>Quarter 2</h2>
+        <ul class="nav nav-pills navpillbg" style="background-color: rgb(247, 247, 250); margin-right: 30px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#2LG">Learning Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#2FA">Formative Assessments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#2AA">Alternative Assessments</a>
+            </li>
+        </ul>
+        <div class="container" id="2LG" style="margin-top: 30px;"><H2>Learning Guides</H2><hr>
+            <h3>Week 1</h3><hr>
+            <h3>Week 2</h3><hr>
+        </div>
+        <div class="container" id="2FA"><H2>Formative Assessments</H2><hr>
+            <h3>FA 1: Cells</h3><hr>
+            <h3>FA 2: Ilang oras ka naghintay sa cellphone wala siyang reply</h3><hr>
+        </div>
+        <div class="container" id="2AA"><H2>Alternative Assessments</H2><hr>
+            <h3>AA 1: ung single cells nga nakajowa ikaw bat wala</h3><hr>
+            <h3>AA 2: multicellular relationships</h3><hr>
+        </div>   
+    </div>
+    <div class="container tab-pane fade" id="q3" role="tabpanel" aria-labelledby="q3-tab"><h2>Quarter 3</h2>
+        <ul class="nav nav-pills navpillbg" style="background-color: rgb(247, 247, 250); margin-right: 30px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#3LG">Learning Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#3FA">Formative Assessments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#3AA">Alternative Assessments</a>
+            </li>
+        </ul>
+        <div class="container" id="3LG" style="margin-top: 30px;"><H2>Learning Guides</H2><hr>
+            <h3>Week 1</h3><hr>
+            <h3>Week 2</h3><hr>
+        </div>
+        <div class="container" id="3FA"><H2>Formative Assessments</H2><hr>
+            <h3>FA 1: bat di niya ako gusto</h3><hr>
+            <h3>FA 2: crush hunting</h3><hr>
+        </div>
+        <div class="container" id="3AA"><H2>Alternative Assessments</H2><hr>
+            <h3>AA 1: children</h3><hr>
+            <h3>AA 2: adult</h3><hr>
+        </div>   
+    </div>
+    
+    <div class="container tab-pane fade" id="q4" role="tabpanel" aria-labelledby="q4-tab"><h2>Quarter 4</h2>
+        <ul class="nav nav-pills navpillbg" style="background-color: rgb(247, 247, 250); margin-right: 30px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#4LG">Learning Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#4FA">Formative Assessments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#4AA">Alternative Assessments</a>
+            </li>
+        </ul>
+        <div class="container" id="4LG" style="margin-top: 30px;"><H2>Learning Guides</H2><hr>
+            <h3>Week 1</h3><hr>
+            <h3>Week 2</h3><hr>
+        </div>
+        <div class="container" id="4FA"><H2>Formative Assessments</H2><hr>
+            <h3>FA 1: move on na daw</h3><hr>
+            <h3>FA 2: how to move on</h3><hr>
+        </div>
+        <div class="container" id="4AA"><H2>Alternative Assessments</H2><hr>
+            <h3>AA 1: essay on why single is better</h3><hr>
+            <h3>AA 2: ang landi daw ng mga multicellular</h3><hr>
+        </div>   
+    </div>
+    <div class="container tab-pane fade" id="grades" role="tabpanel" aria-labelledby="grades-tab"><h2>Grades</h2><hr>
+      <div class="table-responsive">
+        <table class="table caption-top table-striped table-hover">
+            <caption>Biology</caption>
+            <thead>
+              <tr>
+                <th scope="col">Activity</th>
+                <th scope="col">Score</th>
+                <th scope="col">Percentage</th>
+                <th scope="col">Remarks</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">FA 1</th>
+                <td>12/20</td>
+                <td>60%</td>
+                <td>Sayang nak huhu</td>
+              </tr>
+              <tr>
+                <th scope="row">FA 2</th>
+                <td>30/30</td>
+                <td>100%</td>
+                <td>Ganda naman ng essay</td>
+              </tr>
+              <tr>
+                <th scope="row">AA 1</th>
+                <td>18/20</td>
+                <td>90%</td>
+                <td>Color scheme, check, check, CHECK</td>
+              </tr>
+              <tr>
+                <th scope="row">LE 1</th>
+                <td>12/20</td>
+                <td>60%</td>
+                <td>LABAN!!!!</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
+  <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                icon.src = "images/sun.png";
+            }else{
+                icon.src = "images/moon.png";
+            }
+        }
+    </script>
+</body>
+</html>

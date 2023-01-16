@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology: Quiz 1</title>
+    <link rel="icon" href="img/dost.png" type="image/x-icon">
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+* {
+box-sizing: border-box;
+}
+body {
+background-color: #b8c6db;
+background-image: url(img/clcilabyu.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+font-family: "Poppins", sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+margin: 0;
+}
+.quiz-container {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+width: 600px;
+max-width: 95vw;
+overflow: hidden;
+}
+.quiz-header {
+padding: 4rem;
+}
+h2 {
+padding: 1rem;
+text-align: center;
+margin: 0;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+ul li {
+font-size: 1.2rem;
+margin: 1rem 0;
+}
+ul li label {
+cursor: pointer;
+}
+button {
+background-color: #5995fd;
+color: #fff;
+border: none;
+display: block;
+width: 100%;
+cursor: pointer;
+font-size: 1.1rem;
+font-family: inherit;
+padding: 1.3rem;
+}
+button:hover {
+background-color: #3769c0;
+}
+button:focus {
+outline: none;
+background-color: #3769c0;
+}
+a{
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question is loading...</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Answer...</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Answer...</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Answer...</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Answer...</label>
+                    </li>
+                </ul>
+        </div>
+            <button id="submit">Submit</button>
+        </div>
+<script>
+const quizData = [
+{
+question: "How many types of body tissue are there",
+a: "1",
+b: "2",
+c: "3",
+d: "4",
+correct: "d",
+},
+{
+question: "How does a cell maintain homeostasis?",
+a: "Flexibility",
+b: "Regulates what enters and leaves the cell",
+c: "Protective barrier",
+d: "Structure and support",
+correct: "b",
+},
+{
+question: "What is involuntary contractions of voluntary muscles to warm up?",
+a: "Shivering",
+b: "sweating",
+c: "vasodilation",
+d: "Vasoconstriction",
+correct: "a",
+},
+{
+question: "Which can be found in a plant cell but NOT an animal cell?",
+a: "vacuole",
+b: "nucleus",
+c: "chloroplast",
+d: "mitochondria",
+correct: "c",
+},
+];
+const quiz = document.getElementById("quiz");
+const answerElements = document.querySelectorAll(".answer");
+const questionElement = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitButton = document.getElementById("submit");
+let currentQuiz = 0;
+let score = 0;
+const deselectAnswers = () => {
+answerElements.forEach((answer) => (answer.checked = false));
+};
+const getSelected = () => {
+let answer;
+answerElements.forEach((answerElement) => {
+if (answerElement.checked) answer = answerElement.id;
+});
+return answer;
+};
+const loadQuiz = () => {
+deselectAnswers();
+const currentQuizData = quizData[currentQuiz];
+questionElement.innerText = currentQuizData.question;
+a_text.innerText = currentQuizData.a;
+b_text.innerText = currentQuizData.b;
+c_text.innerText = currentQuizData.c;
+d_text.innerText = currentQuizData.d;
+};
+loadQuiz();
+submitButton.addEventListener("click", () => {
+const answer = getSelected();
+if (answer) {
+if (answer === quizData[currentQuiz].correct) score++;
+currentQuiz++;
+if (currentQuiz < quizData.length) loadQuiz();
+else {
+quiz.innerHTML = `
+<h2>You answered ${score}/${quizData.length} questions correctly</h2>
+<a href="Biology.html"><button onclick="history.go(0)">Return to Khub</button></a>
+` // location.reload()
+}
+}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="khubcourses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" href="img/dost.png" type="image/x-icon">
+    <style>
+        .title{
+  color:var(--secondary-color);
+}
+      .team {
+        background: var(--color-bg1);
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .team__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      
+      .tanan {
+        width: 100%;
+
+      }
+
+      .team__member {
+        background-color: rgb(255, 255, 255);
+        padding: 2rem;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .team__member:hover {
+        background:  linear-gradient(to bottom, #9FB4FF, #FFF56D);
+        border-color: var(--color-primary);
+      }
+
+      .team__member-image img {
+        filter: saturate(0);
+      }
+
+      .team__member:hover img {
+        filter: saturate(1);
+      }
+
+      .team__member-info * {
+        text-align: center;
+        margin-top: 1.4rem;
+      }
+
+      .team__member-info p {
+        color: var(--color-light)
+      }
+
+      .team__member-socials {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 1rem 0 0 1rem;
+        box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      .team__member:hover .team__member-socials {
+        right: 0;
+      }
+
+      .team__member-socials a {
+        padding: 0.8rem;
+
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      /* tablet */
+
+      @media screen and (max-width: 1024px) {
+        .team {
+            margin-top: 2rem;
+        }
+        
+        .team__container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .team__member {
+            padding: 1rem;
+        }
+      }
+
+      /* tablet */
+
+      @media screen and (max-width: 600px) {
+        .team__container {
+            grid-template-columns: 1fr;
+            gap: 0.7rem;
+        }
+        .team__member {
+            padding: 0;
+        }
+        .team__member p {
+            margin-bottom: 1.5rem;
+        }
+        
+      }
+
+      /* tablet */
+
+      @media screen and (max-width: 400px) {
+        .team__container {
+            grid-template-columns: 1fr;
+            gap: 0.2rem;
+        }
+        .team__member {
+            padding: 0;
+        }
+        .team__member p {
+            margin-bottom: 1.5rem;
+        }
+        
+      }
+    </style>
+</head>
+<body class="container-fluid">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-2 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="images/pshs_logo.png" alt="PSHS Logo" width="45" height="45" class="d-inline-align-text-center mx-1">
+            Knowledge Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="underline-hover nav-link" href="khubhomepage.html">Home</a>
+                  <a class="underline-hover nav-link" href="khubcourses.html">Courses</a>
+                  <a class="underline-hover nav-link active" aria-current="page" href="#">About</a>
+                  <img src="images/moon.png" alt="Moon" id="icon">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="team">
+        <br><br><br>
+      <h1 class="title" style="margin-bottom: 50px;">About Us</h1>
+          <div class="container team__container">
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="janine.jpg" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Janine</h2>
+                      <p>Homepage If Not Logged In and;
+                         Quiz Page Creator and; Grades page
+                      </p>
+                  </div>
+                  <div class="team__member-socials">
+                      <a href="https://www.instagram.com/riywuu/" target="_blank"><i class="uil uil-instagram"></i></a>
+                      <a href="https://twitter.com" target="_blank"><i class="uil uil-discord"></i></a>
+                      <a href="https://www.facebook.com/janineandrea.emmanuel.7/" target="_blank"><i class="uil uil-facebook-f"></i></a>
+                  </div>
+              </article>
+              
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="fiona.jpg" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Fiona</h2>
+                      <p>Homepage If Logged In Creator and; Courses Page</p>
+                  </div>
+                  <div class="team__member-socials">
+                      <a href="https://www.instagram.com/pyeoning/" target="_blank" ><i class="uil uil-instagram"></i></a>
+                      <a href="https://twitter.com" target="_blank" ><i class="uil uil-discord"></i></a>
+                      <a href="https://www.facebook.com/fiona.lavapie" target="_blank" ><i class="uil uil-facebook-f"></i></a>
+                  </div>
+              </article>
+              
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="leann.jpg" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Leann</h2>
+                      <p>About us Page</p>
+                  </div>
+                  <div class="team__member-socials">
+                      <a href="https://www.instagram.com/leann_madrid/" target="_blank" ><i class="uil uil-instagram"></i></a>
+                      <a href="https://twitter.com" target="_blank" ><i class="uil uil-discord"></i></a>
+                      <a href="https://www.facebook.com/leannnnnnn" target="_blank" ><i class="uil uil-facebook-f"></i></a>
+                  </div>
+              </article>
+              
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="pisay.png" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Alfred</h2>
+                      <p>Grades page</p>
+                  </div>
+                  <div class="team__member-socials">
+                      <a href="https://www.instagram.com" target="_blank" ><i class="uil uil-instagram"></i></a>
+                      <a href="https://twitter.com" target="_blank" ><i class="uil uil-discord"></i></a>
+                      <a href="https://www.facebook.com/alfred.pineda.9480" target="_blank" ><i class="uil uil-facebook-f"></i></a>
+                  </div>
+              </article>
+              
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="jed.png" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Jed</h2>
+                      <p>Course page (Biology)</p>
+                  </div>
+                  <div class="team__member-socials">
+                      <a href="https://www.instagram.com" target="_blank" ><i class="uil uil-instagram"></i></a>
+                      <a href="https://twitter.com" target="_blank" ><i class="uil uil-discord"></i></a>
+                      <a href="https://www.facebook.com/jed.arcenas.1" target="_blank" ><i class="uil uil-facebook-f"></i></a>
+                  </div>
+              </article>
+  
+              <article class="team__member">
+                  <div class="team__member-image">
+                      <img class="tanan" src="pisay.png" alt="mukha ng team">
+                  </div>
+                  <div class="team__member-info">
+                      <h2>Links</h2>
+                      <a href="https://youtube.com/playlist?list=PLNi7bZD_WGylHofTJ5rc_IG-c91lOrbUX"><p>Tutorials We Based On!</p></a>
+                  </div>
+              </article>
+              
+              
+          </div>
+  
+      </section>
+<script>
+  var icon = document.getElementById("icon");
+
+  icon.onclick = function(){
+      document.body.classList.toggle("dark-mode");
+      if(document.body.classList.contains("dark-mode")){
+          icon.src = "images/sun.png";
+      }else{
+          icon.src = "images/moon.png";
+      }
+  }
+</script>
+</body>
+</html>
