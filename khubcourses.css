@@ -9,7 +9,7 @@ body {
  }
  .dark-mode{
      --primary-color: #252525;
-     --secondary-color: rgb(136, 136, 136);
+     --secondary-color: rgb(255, 255, 255);
  }
 html{
     scroll-behavior: smooth;
@@ -62,6 +62,9 @@ html{
 }
 .underline-hover:hover::before {
     width:100%;
+}
+.nav-link:hover {
+    color:rgb(165, 165, 165) !important;
 }
 .bio {
     background-image:url('images/biobg.jpg');

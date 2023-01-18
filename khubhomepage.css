@@ -9,7 +9,7 @@ body {
 }
 .dark-mode{
     --primary-color: #252525;
-    --secondary-color: rgb(136, 136, 136);
+    --secondary-color: rgb(255, 255, 255);
 }
 html {
     scroll-behavior: smooth;
@@ -104,3 +104,9 @@ div section img {
     color:var(--secondary-color);
     font-family: 'Poppins', sans-serif !important;
 }
+.nav-link:hover {
+    color:rgb(165, 165, 165) !important;
+}
+/*nav div a .text-secondary {
+    color:rgb(177, 176, 176) !important;
+}*/
